@@ -1,0 +1,87 @@
+body {
+        background-color: aqua; overflow: auto; font: 14px Arial, sans-serif;
+}
+h1 {
+        text-align: center; color: rgba(175, 47, 47, 0.15);
+        text-shadow: 1px 1px 1px #ccc; font-size: 100px; margin:0; padding:0;
+        text-rendering: optimizeLegibility; font-weight:100;
+}
+#cross{
+        font-weight: bold; color: red; cursor: pointer; opacity: 0;
+        position: absolute; right: 0; top:15px; font-family:'Barrio'; margin-right:20px;
+}
+#cross:hover {
+        opacity: 1;
+}
+input.checkBox {
+        border:2px dotted #00f; box-sizing: border-box; text-rendering: auto; color: initial;
+        letter-spacing: normal; word-spacing: normal; text-transform: none; margin: 20px;
+        text-indent: 0px; text-shadow: none; display: inline-block; width: 28px;height: 28px;
+        position: relative; margin-top: 15px auto; background: #fcfff4; 
+        /*background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); */
+        border-radius: 50px; box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+}
+label {
+        width: 20px; height: 20px; position: absolute; top: 24px; left: 24px; cursor: pointer;
+        /*background: linear-gradient(top, #222 0%, #45484d 100%); */ border-radius: 50px;
+        box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+}
+label:after {
+        content: ''; width: 9px; height: 5px; position: absolute; top: 5px; left: 4px;
+        border: 3px solid green; border-top: none; border-right: none; background: transparent;
+        opacity: 0; transform: rotate(-45deg);
+}
+label:hover {
+        opacity:1;
+}
+label:hover::after {
+        opacity: 0.3;
+}
+input.checkBox {
+        visibility: hidden;
+}
+input.checkBox:checked + label:after {
+        opacity: 1;  
+}
+ul {
+        display: block; margin:0; padding:0;
+}
+ul#myList li {
+        white-space: initial; overflow: hidden;
+}
+li {
+        list-style:none; position: relative; font-size: 20px; background-color: white;
+        cursor:pointer; font-family: 'Nobile'; line-height: 200%; overflow:hidden; 
+        border-width:0.5px; border: black;
+}
+li:hover {
+        background-color: blanchedalmond;
+}
+.checked {
+        text-decoration: line-through; opacity: 0.5; border:0; margin: 0;
+}
+#root {
+        padding: 16px 16px 16px 60px;border: none;background: rgba(0, 0, 0, 0.003);
+        box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);  text-rendering: auto;
+        margin: 0; width: 100%; font-size: 24px; box-sizing: border-box; -webkit-font-smoothing: antialiased;
+        color: initial; letter-spacing: normal; word-spacing: normal; text-transform: none; text-indent: 0px;
+        text-shadow: none; display: inline-block; text-align: start; -webkit-appearance: textfield;
+        background-color: white; -webkit-rtl-ordering: logical; cursor: text; margin: 0em;
+        font: 400 13.3333px Arial; margin: 0; border:0;
+}
+#editOp {
+        position: relative; left:0; top: 0; 
+}
+button {
+        cursor: pointer; border-radius: 18px; margin: 15px; height: 30px; width: 100px; border:0;
+}
+.selected {
+        background-color: red;
+}
+#checkAll {
+        margin:0; margin-top:-5px;margin-left:10px; margin-bottom: 10px;
+        visibility: visible; position: absolute; top:0; left:0; order:2;
+}
+span {
+        position: relative;
+}
